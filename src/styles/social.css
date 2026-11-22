@@ -1,0 +1,48 @@
+.social__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.social__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 22px;
+  height: 100%;
+}
+.social__card:hover {
+  transform: translateY(-4px);
+}
+.social__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+.social__text strong {
+  font-weight: 600;
+}
+.social__text small {
+  color: var(--muted);
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.social__arrow {
+  color: var(--muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.social__card:hover .social__arrow {
+  color: var(--accent-2);
+  transform: translate(3px, -3px);
+}
+.social__card:hover .icon-badge {
+  background: var(--accent);
+  color: #fff;
+}
+.social__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

@@ -1,0 +1,55 @@
+.about__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: start;
+}
+.about__lead {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+.about__quote {
+  position: relative;
+  margin: 32px 0 0;
+  padding: 28px;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.02));
+}
+.about__quote-icon {
+  color: var(--accent-2);
+  margin-bottom: 8px;
+}
+.about__quote p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-style: italic;
+}
+.about__cards {
+  display: grid;
+  gap: 16px;
+}
+.about__card {
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+}
+.about__card:hover {
+  transform: translateX(4px);
+}
+.about__card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.about__card p {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+@media (max-width: 900px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+  }
+}

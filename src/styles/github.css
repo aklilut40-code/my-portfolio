@@ -1,0 +1,228 @@
+.gh__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+.gh__stat {
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid var(--border);
+}
+.gh__stat strong {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--accent-2);
+}
+.gh__stat > span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.gh__notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  background: rgba(250, 204, 21, 0.06);
+  color: #fde68a;
+  font-size: 0.9rem;
+}
+
+.gh__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  margin-bottom: 28px;
+}
+.gh__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 240px;
+  max-width: 340px;
+  padding: 0 14px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  transition: border-color 0.2s ease;
+}
+.gh__search:focus-within {
+  border-color: var(--accent);
+}
+.gh__search input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.93rem;
+}
+.gh__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.gh__filter {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.gh__filter:hover {
+  color: var(--text);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+.gh__filter.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.gh__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.gh__grid > * {
+  min-width: 0;
+}
+
+.repo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  padding: 24px;
+}
+.repo__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.repo__pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-2);
+  background: rgba(59, 130, 246, 0.14);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+.repo__ext {
+  margin-left: auto;
+  color: var(--muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.repo:hover .repo__ext {
+  color: var(--accent-2);
+  transform: translate(2px, -2px);
+}
+.repo__name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  overflow-wrap: anywhere;
+}
+.repo__desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.repo__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.repo__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: auto;
+  padding-top: 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.repo__meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.repo__lang i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.repo__ago {
+  margin-left: auto;
+}
+.repo--skeleton {
+  min-height: 190px;
+  gap: 14px;
+}
+.repo--skeleton span {
+  display: block;
+  height: 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1b2740 25%, #243352 50%, #1b2740 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+.repo--skeleton span:nth-child(1) { width: 40%; height: 20px; }
+.repo--skeleton span:nth-child(2) { width: 90%; }
+.repo--skeleton span:nth-child(3) { width: 65%; }
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
+.gh__empty {
+  color: var(--muted);
+  padding: 32px 0;
+}
+.gh__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+@media (max-width: 520px) {
+  .gh__stats {
+    gap: 10px;
+  }
+  .gh__stat {
+    padding: 14px;
+  }
+  .gh__grid {
+    grid-template-columns: 1fr;
+  }
+  .gh__search {
+    max-width: none;
+  }
+}
