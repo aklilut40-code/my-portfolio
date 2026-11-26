@@ -7,6 +7,8 @@
 //  Leave image as '' to show a placeholder.
 // ===========================================================
 
+const base = import.meta.env.BASE_URL || '/'
+
 export const projects = [
   {
     id: 'ecommerce',
@@ -14,7 +16,7 @@ export const projects = [
     description:
       'A full-stack e-commerce application with user authentication and product management, built with a React frontend and a Node.js / Express REST API.',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-    image: '/images/projects/ecommerce.png',
+    image: `${base}images/projects/ecommerce.png`,
     github: '',
     demo: '',
   },
@@ -24,7 +26,7 @@ export const projects = [
     description:
       'A marketplace web application where listings are managed through a REST API, built with the MERN stack.',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-    image: '/images/projects/marketplace.png',
+    image: `${base}images/projects/marketplace.png`,
     github: '',
     demo: '',
   },
@@ -34,7 +36,7 @@ export const projects = [
     description:
       'A personal productivity application with frontend and backend components for building and tracking daily habits.',
     tech: ['Frontend', 'Backend'],
-    image: '/images/projects/habit-tracker.png',
+    image: `${base}images/projects/habit-tracker.png`,
     github: '',
     demo: '',
   },

@@ -16,7 +16,7 @@ export const profile = {
     'Technology is more than writing code. It is about solving problems, creating opportunities, and building something meaningful.',
   university: 'Mekelle University',
   degree: 'Software Engineering',
-  photo: '/images/profile.jpg',
+  photo: `${import.meta.env.BASE_URL}images/profile.jpg`,
   photoAlt: 'Portrait of Aklilu Tesfay',
   heroKeywords: [
     'Backend Development',
